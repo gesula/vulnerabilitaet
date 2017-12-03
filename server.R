@@ -5,7 +5,7 @@ shinyServer(function(input, output) {
 
 
 
-  output$distPlot <- renderPlot({
+  output$distPlot <- renderPlot(height = 600, {
 
     data <- rbind(data,
                   tibble(
@@ -14,6 +14,7 @@ shinyServer(function(input, output) {
                   ))
 
     data$x <- factor(data$x, levels = c(1, 2, 3), labels = c("Sreit in der Familie", "offene Rechnung", "zusätzlicher Arbeitsauftrag"))
+
 
     # base
     ggplot(data = data, aes(x = x, fill = x, alpha = y)) +
