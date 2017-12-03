@@ -4,11 +4,9 @@ library(shiny)
 library(ggplot2)
 library(dplyr)
 library(shinythemes)
-library("ggplot2")
-library("tadaatoolbox")
 
 # optisches
-theme_set(theme_tadaa(bg = "white"))
+theme_set(tadaatoolbox::theme_tadaa(bg = "white"))
 
 # data
 data <- tibble(

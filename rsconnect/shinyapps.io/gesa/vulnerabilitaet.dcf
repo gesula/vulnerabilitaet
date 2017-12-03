@@ -1,0 +1,10 @@
+name: vulnerabilitaet
+title:
+username:
+account: gesa
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 243526
+bundleId: 1112564
+url: https://gesa.shinyapps.io/vulnerabilitaet/
+when: 1512338160.06856
