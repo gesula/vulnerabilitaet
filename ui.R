@@ -3,7 +3,7 @@
 fluidPage(theme = shinytheme(theme = "journal"),
 
   # Application title
-  titlePanel("Old Faithful Geyser Data"),
+  titlePanel("This is only a test"),
 
   # Sidebar with a slider input for number of bins
   sidebarLayout(
