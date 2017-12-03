@@ -7,6 +7,7 @@ fluidPage(theme = shinytheme(theme = "sandstone"),
   titlePanel("Vulnerabilitäts-Stress-Modell"),
 
   # Sidebar with a slider input for Angstschwelle
+
   sidebarLayout(
     sidebarPanel(
       sliderInput(inputId = "schwelle",
@@ -14,6 +15,7 @@ fluidPage(theme = shinytheme(theme = "sandstone"),
                   min = 1,
                   max = 21,
                   value = 12),
+
  #     actionButton("DOSTUFF", label = "GO FOR GOLD")
 
       sliderInput(inputId = "vulnerabilitaet",
@@ -22,7 +24,6 @@ fluidPage(theme = shinytheme(theme = "sandstone"),
                   max = 9,
                   value = 2)
     ),
-
 
     # Show a plot of the generated distribution
     mainPanel(

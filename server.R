@@ -57,12 +57,7 @@ shinyServer(function(input, output) {
                       "Hohe Vulnerabilität"
                     )) +
       scale_alpha_manual(values = c("1" = .5, "2" = 0))
-
-
-
-
   })
-
 })
 
 
