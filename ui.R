@@ -10,6 +10,7 @@ fluidPage(theme = shinytheme(theme = "sandstone"),
 
   sidebarLayout(
     sidebarPanel(
+
       sliderInput(inputId = "schwelle",
                   "Angstschwelle:",
                   min = 1,
@@ -22,8 +23,23 @@ fluidPage(theme = shinytheme(theme = "sandstone"),
                   "Vulnerabilität:",
                   min = 1,
                   max = 9,
-                  value = 2)
-    ),
+                  value = 2),
+
+ # Text1
+      textInput(inputId = "text_klein",
+                label = "Kleinster akuter Stressor",
+                value = "Sreit in der Familie"),
+
+ # Text2
+ textInput(inputId = "text_mittel",
+           label = "Mittlerer akuter Stressor",
+           value = "Offene Rechnungen"),
+
+ # Text3
+ textInput(inputId = "text_gross",
+           label = "Größter akuter Stressor",
+           value = "Zusätzlicher Arbeitsauftrag")
+ ),
 
     # Show a plot of the generated distribution
     mainPanel(
