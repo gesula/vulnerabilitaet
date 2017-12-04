@@ -13,7 +13,9 @@ shinyServer(function(input, output) {
                     y = "2"
                   ))
 
-    data$x <- factor(data$x, levels = c(1, 2, 3), labels = c("Sreit in der Familie", "offene Rechnung", "zusätzlicher Arbeitsauftrag"))
+
+    data$x <- factor(data$x, levels = c(1, 2, 3),
+                     labels = c(input$text_klein, input$text_mittel, input$text_gross))
 
 
     # base
