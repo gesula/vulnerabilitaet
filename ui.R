@@ -21,7 +21,7 @@ fluidPage(theme = shinytheme(theme = "sandstone"),
 
       sliderInput(inputId = "vulnerabilitaet",
                   "Vulnerabilität:",
-                  min = 1,
+                  min = 0,
                   max = 9,
                   value = 2),
 
