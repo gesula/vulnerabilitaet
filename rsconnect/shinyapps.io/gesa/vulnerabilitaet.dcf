@@ -5,6 +5,8 @@ account: gesa
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 243526
-bundleId: 1112564
+bundleId: 1114093
 url: https://gesa.shinyapps.io/vulnerabilitaet/
-when: 1512338160.06856
+when: 1512392611.44713
+asMultiple: FALSE
+asStatic: FALSE

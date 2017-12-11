@@ -6,7 +6,8 @@ library(dplyr)
 library(shinythemes)
 
 # optisches
-theme_set(tadaatoolbox::theme_tadaa(bg = "white"))
+source("theme_me.R")
+theme_set(theme_me(axis_title_size = 2, axis_text_size = 1.5, position_x = 0, text_colour_x = "black"))
 
 # data
 data <- tibble(

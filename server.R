@@ -23,8 +23,6 @@ shinyServer(function(input, output) {
       geom_bar() +
       scale_y_continuous(breaks = c(0, 20), minor_breaks = 0,
                          labels = c("niedrig", "hoch"), limits = c(0, 21)) +
-      geom_segment(data = NULL, aes(x = .1, y = 0, xend = .1, yend = 20.5),
-                   arrow = arrow(length = unit (.2, "cm")), size = .05, color = "grey") +
       labs(
         y = "Belastungs-/ Stressniveau",
         x = "Akute Stressoren"
@@ -34,14 +32,14 @@ shinyServer(function(input, output) {
                    ifelse(
                      input$schwelle > input$vulnerabilitaet,
                      input$schwelle,
-                     input$vulnerabilitaet +1
+                     input$vulnerabilitaet + 1
                      ))+
       geom_text(aes(x = 0, label = "Angstschwelle",
-                    vjust = -1, hjust = -.25), color = "darkred", y =
+                    vjust = -.5, hjust = -.25), size = 5, color = "darkred", y =
                 ifelse(
                   input$schwelle > input$vulnerabilitaet,
                   input$schwelle,
-                  input$vulnerabilitaet +1
+                  input$vulnerabilitaet + 1
                 )) +
       # Farbe
       scale_fill_manual(values =
@@ -51,9 +49,9 @@ shinyServer(function(input, output) {
                             "darkblue"
                             )) +
       guides(fill = F, alpha = F) +
-    # Füllung
+    # Vulnerabilität & Farbe
       geom_hline(yintercept = input$vulnerabilitaet, linetype = 1, size = 1, color = "black") +
-      geom_text(aes(x = 0, y = input$vulnerabilitaet, vjust = 1.5, hjust = -.25), color = "black",
+      geom_text(aes(x = 0, y = input$vulnerabilitaet, vjust = 1.5, hjust = -.25), size = 5, color = "black",
                     label = ifelse(
                       input$vulnerabilitaet < 5,
                       "Niedrige Vulnerabilität",
